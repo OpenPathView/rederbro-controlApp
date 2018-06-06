@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/sensorsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manage sensors"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10sp"
+        android:layout_marginLeft="10sp"/>
+
+    <Button
+        android:id="@+id/cord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cord"
+        android:textAllCaps="false"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sensorsTitle"
+
+        android:layout_marginTop="15sp"/>
+
+    <TextView
+        android:id="@+id/automodeDistText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Automode distance :"
+        android:textSize="25sp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cord"
+
+        android:layout_marginTop="15sp"/>
+
+    <EditText
+        android:id="@+id/distance"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/automodeDistText"
+
+        android:layout_marginLeft="50sp"
+        android:layout_marginTop="15sp"/>
+
+    <Button
+        android:id="@+id/setDistance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set"
+        android:textAllCaps="false"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/automodeDistText"
+
+        android:layout_marginRight="50sp"
+        android:layout_marginTop="15sp"/>
+
+    <TextView
+        android:id="@+id/automodeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Automode :"
+        android:textSize="25dp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/distance"
+
+        android:layout_marginTop="15sp"/>
+
+    <Button
+        android:id="@+id/automodeOn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="On"
+
+        app:layout_constraintTop_toBottomOf="@id/automodeText"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:layout_marginTop="10sp"
+        android:layout_marginLeft="50sp"/>
+
+    <Button
+        android:id="@+id/automodeOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Off"
+
+        app:layout_constraintTop_toBottomOf="@id/automodeText"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:layout_marginTop="10sp"
+        android:layout_marginRight="50sp"/>
+
+
+</android.support.constraint.ConstraintLayout>

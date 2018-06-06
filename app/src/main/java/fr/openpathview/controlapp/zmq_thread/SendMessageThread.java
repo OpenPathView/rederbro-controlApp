@@ -1,8 +1,10 @@
-package fr.openpathview.controlapp;
+package fr.openpathview.controlapp.zmq_thread;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 import org.zeromq.ZMQ;
+
+import fr.openpathview.controlapp.ControlApp;
+import fr.openpathview.controlapp.data.Port;
 
 /**
  * Created by simon on 27/01/18.
@@ -19,7 +21,7 @@ public class SendMessageThread extends Thread {
         context = ZMQ.context(1);
         this.socket= context.socket(ZMQ.PUSH);
 
-        this.adress = "tcp://"+MainActivity.address+":"+Port.mainClient;
+        this.adress = "tcp://"+ ControlApp.getAddress()+":"+ Port.mainClient;
     }
     public void run(){
         socket.connect(this.adress);

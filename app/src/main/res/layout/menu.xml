@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textManage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Manage :"
+        android:textSize="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="10sp"/>
+
+    <Button
+        android:id="@+id/goproButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gopro"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/textManage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="30sp"
+        android:layout_marginTop="10sp"/>
+
+    <Button
+        android:id="@+id/campaignButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Campaign"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/textManage"
+        app:layout_constraintRight_toRightOf="@id/sensorsButton"
+        app:layout_constraintLeft_toLeftOf="@id/goproButton"
+        android:layout_marginTop="10sp"/>
+
+    <Button
+        android:id="@+id/sensorsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sensors"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/textManage"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="30sp"
+        android:layout_marginTop="10sp"/>
+
+    <TextView
+        android:id="@+id/angleText"
+        android:text="Angle : "
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toTopOf="@id/angle"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:layout_marginLeft="50sp"/>
+
+    <TextView
+        android:id="@+id/angle"
+        android:text="X"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toTopOf="@id/leaflet"
+        app:layout_constraintLeft_toLeftOf="@id/angleText"
+
+        android:layout_marginLeft="30sp"
+        android:layout_marginBottom="10sp"/>
+
+    <TextView
+        android:id="@+id/altText"
+        android:text="Altitude : "
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toTopOf="@id/angle"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:layout_marginRight="50sp"/>
+
+    <TextView
+        android:id="@+id/alt"
+        android:text="X"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toTopOf="@id/leaflet"
+        app:layout_constraintLeft_toLeftOf="@id/altText"
+
+        android:layout_marginLeft="30sp"
+        android:layout_marginBottom="10sp"/>
+
+    <TextView
+        android:id="@+id/latText"
+        android:text="Latitude : "
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toTopOf="@id/lat"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        android:layout_marginLeft="50sp"/>
+
+    <TextView
+        android:id="@+id/lat"
+        android:text="X"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toTopOf="@id/angleText"
+        app:layout_constraintLeft_toLeftOf="@id/latText"
+
+        android:layout_marginLeft="30sp"
+        android:layout_marginBottom="10sp"/>
+
+    <TextView
+        android:id="@+id/lonText"
+        android:text="Longitude : "
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toTopOf="@id/lat"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:layout_marginRight="50sp"/>
+
+    <TextView
+        android:id="@+id/lon"
+        android:text="X"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toTopOf="@id/angleText"
+        app:layout_constraintLeft_toLeftOf="@id/lonText"
+
+        android:layout_marginLeft="30sp"
+        android:layout_marginBottom="10sp"/>
+
+    <WebView
+        android:id="@+id/leaflet"
+        android:layout_width="300sp"
+        android:layout_height="350sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="30sp"/>
+
+</android.support.constraint.ConstraintLayout>

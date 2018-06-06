@@ -1,6 +1,5 @@
-package fr.openpathview.controlapp;
+package fr.openpathview.controlapp.zmq_thread;
 
-import android.app.Activity;
 import android.os.Handler;
 import android.os.Looper;
 import android.widget.TextView;
@@ -9,6 +8,9 @@ import android.widget.Toast;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.zeromq.ZMQ;
+
+import fr.openpathview.controlapp.ControlApp;
+import fr.openpathview.controlapp.data.Port;
 
 /**
  * Created by simon on 27/01/18.
@@ -42,8 +44,8 @@ public class ReceiveThread extends Thread {
         this.gpsSocket = context.socket(ZMQ.SUB);
         this.campaignSocket = context.socket(ZMQ.SUB);
 
-        this.gpsAdress = "tcp://"+MainActivity.address+":"+Port.gpsPub;
-        this.campaignAdress = "tcp://"+MainActivity.address+":"+Port.campaignPub;
+        this.gpsAdress = "tcp://"+ ControlApp.getAddress()+":"+ Port.gpsPub;
+        this.campaignAdress = "tcp://"+ControlApp.getAddress()+":"+Port.campaignPub;
     }
     public void run(){
         this.gpsSocket.connect(this.gpsAdress);
@@ -80,7 +82,7 @@ public class ReceiveThread extends Thread {
                     handler.post(new Runnable() {
                         public void run() {
                             try {
-                                Toast.makeText(ConnectActivity.context, ReceiveThread.campaignMsg.get("info") + " : " + ReceiveThread.campaignMsg.get("error"),
+                                Toast.makeText(ControlApp.getCurrentActivity(), ReceiveThread.campaignMsg.get("info") + " : " + ReceiveThread.campaignMsg.get("error"),
                                         Toast.LENGTH_SHORT).show();
                             }catch(JSONException e){
                                 e.printStackTrace();
