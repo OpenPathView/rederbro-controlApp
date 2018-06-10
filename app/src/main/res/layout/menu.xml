@@ -148,6 +148,31 @@
         android:layout_marginLeft="30sp"
         android:layout_marginBottom="10sp"/>
 
+    <TextView
+        android:id="@+id/batText"
+        android:text="Battery : "
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toTopOf="@id/bat"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/bat"
+        android:text="X"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toTopOf="@id/leaflet"
+        app:layout_constraintLeft_toLeftOf="@id/batText"
+
+        android:layout_marginLeft="30sp"
+        android:layout_marginBottom="10sp"/>
+
     <WebView
         android:id="@+id/leaflet"
         android:layout_width="300sp"

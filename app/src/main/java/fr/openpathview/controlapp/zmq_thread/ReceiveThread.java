@@ -28,15 +28,17 @@ public class ReceiveThread extends Thread {
     protected static TextView lon;
     protected static TextView alt;
     protected static TextView angle;
+    protected static TextView bat;
 
     protected static JSONObject gpsMsg;
     protected static JSONObject campaignMsg;
 
-    public ReceiveThread(TextView lat,TextView lon,TextView alt,TextView angle){
+    public ReceiveThread(TextView lat,TextView lon,TextView alt,TextView angle, TextView bat){
         this.lat = lat;
         this.lon = lon;
         this.alt = alt;
         this.angle = angle;
+        this.bat = bat;
 
         context = ZMQ.context(1);
         this.poller = context.poller();
@@ -70,6 +72,7 @@ public class ReceiveThread extends Thread {
                                 ReceiveThread.lon.setText(String.format("%.3f", ReceiveThread.gpsMsg.get("lon")));
                                 ReceiveThread.alt.setText(String.format("%.3f", ReceiveThread.gpsMsg.get("alt")));
                                 ReceiveThread.angle.setText(String.format("%.3f", ReceiveThread.gpsMsg.get("head")));
+                                ReceiveThread.bat.setText(String.format("%.3f", ReceiveThread.gpsMsg.get("battVoltage")));
                             }catch(Exception e){
                                 e.printStackTrace();
                             }

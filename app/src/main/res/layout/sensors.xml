@@ -19,7 +19,7 @@
         android:id="@+id/cord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cord"
+        android:text="Get"
         android:textAllCaps="false"
 
         app:layout_constraintLeft_toLeftOf="parent"

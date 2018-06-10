@@ -31,7 +31,7 @@ public class SensorsActivity extends Activity {
             public void onClick(View view) {
                 JSONObject args = new JSONObject();
                 try {
-                    args.put("command", "cord");
+                    args.put("command", "get");
                     args.put("args", "");
                     args.put("topic", "sensors");
                 }catch(Exception e){

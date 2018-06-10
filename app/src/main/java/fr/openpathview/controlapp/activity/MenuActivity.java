@@ -22,6 +22,7 @@ public class MenuActivity extends Activity {
     private TextView lon;
     private TextView alt;
     private TextView angle;
+    private TextView bat;
 
     private ReceiveThread receiveThread;
 
@@ -39,8 +40,9 @@ public class MenuActivity extends Activity {
         this.lon = findViewById(R.id.lon);
         this.alt = findViewById(R.id.alt);
         this.angle = findViewById(R.id.angle);
+        this.bat = findViewById(R.id.bat);
 
-        this.receiveThread = new ReceiveThread(this.lat, this.lon, this.alt, this.angle);
+        this.receiveThread = new ReceiveThread(this.lat, this.lon, this.alt, this.angle, this.bat);
         this.receiveThread.start();
 
         this.leaflet = findViewById(R.id.leaflet);
